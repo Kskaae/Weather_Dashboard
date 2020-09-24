@@ -1,9 +1,15 @@
 $(document).ready(function () {
     const apiKey = "d34d2fad2189d0cb0405954862d69d92"
-    let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=Boise&appid=" + apiKey;
+    let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=boise&appid=" + apiKey + "&units=imperial";
+    let queryURLEl = "https://api.openweathermap.org/data/2.5/weather?q=whitefish&appid=" + apiKey+ "&units=imperial";
+    let queryURLEle = "https://api.openweathermap.org/data/2.5/weather?q=tucson&appid=" + apiKey+ "&units=imperial";
+    // let UVIndexEL = "http://api.openweathermap.org/data/2.5/uvi?lat=43.6150°&lon=116.2023°&appid=" + apikey;
+    // let UVIndexEle = "http://api.openweathermap.org/data/2.5/uvi?lat=43.6150°&lon=116.2023°&appid=" + apikey; 
+    // let UVIndex = "http://api.openweathermap.org/data/2.5/uvi?lat=43.6150°&lon=116.2023°&appid=" + apikey; 
     console.log(queryURL)
-
-    let location = "";
+    console.log(queryURLEl)
+    console.log(queryURLEle)
+    //let location = "";
     // AS A traveler
     // I WANT to see the weather outlook for multiple cities
     // SO THAT I can plan a trip accordingly
@@ -12,33 +18,51 @@ $(document).ready(function () {
 
     // 
     // GIVEN a weather dashboard with form inputs
-    let formEL = document.getElementById("")
-
-
-
+    //let TempEl = ((response.main.temp - 273.15 * 1.80)) + 32;
 
     // WHEN I search for a city
-    $(".btn-submit").click(function () {
+    $(".btn-search").click(function () {
         console.log("here")
         $.ajax({
-            url: queryURL,
+            url: queryURL, 
             method: "GET"
         }).then(function (response) {
             console.log(response)
-const data = response
-$("#boise .temp").text("temperature " + data.main.temp )
-        })
-    })
+            const data = response
+            $("#boise .temp").text("Temperature " + data.main.temp)
+            $("#boise .humidity").text("Humidity" + data.main.humidity)
+            $("#boise .wind").text("Wind Speed" + data.wind.speed)
+            $.ajax({
+                url: queryURLEl, 
+                method: "GET"
+            }).then(function (response) {
+                console.log(response)
+                const data = response
+                $("#whitefish .temp").text("Temperature " + data.main.temp)
+                $("#whitefish .humidity").text("Humidity" + data.main.humidity)
+                $("#whitefish .wind").text("Wind Speed" + data.wind.speed);
+                $.ajax({
+                    url: queryURLEle,
+                    method: "GET"
+                }).then(function (response) {
+                    console.log(response)
+                    const data = response
+                    $("#tucson .temp").text("Temperature " + data.main.temp)
+                    $("#tucson .humidity").text("Humidity" + data.main.humidity)
+                    $("#tucson .wind").text("Wind Speed" + data.wind.speed)
+                });
+            });
+
+        });
+    });
+});
+
 
     // THEN I am presented with current and future conditions for that city and that city is added to the search history
     //Ajax call
 
     // WHEN I view current weather conditions for that city
-    //     $("#city").html("<card>" + response.name + "<card>");
-    //     $("#temp").text("temperature:" + temp);
-    //     $("#humidity").text("Humidity: " + response.main.humidity + "%");
-    //     $("#wind") 
-});
+
 // THEN I am presented with the city name, the icon re-date, ane presentation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
 // WHEN I view the UV index
 // Create UV index ajax call 
