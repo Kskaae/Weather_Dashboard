@@ -1,22 +1,8 @@
-# Weather_Dashboard
-My next dumpster fire.
-# 06 Server-Side APIs: Weather Dashboard
+Submission for Week: 6
+06 Weather Dashboard
+My goals included:
+Creating a functional weather Display using JavaScrip, Jquery, HTML, and CSS.  I attempted to design the code with the following he last searched city forecast
 
-Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
-
-Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. The documentation includes a section called "How to start" that will provide basic setup and usage instructions. Use `localStorage` to store any persistent data.
-
-## User Story
-
-```
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-```
-
-## Acceptance Criteria
-
-```
 GIVEN a weather dashboard with form inputs
 WHEN I search for a city
 THEN I am presented with current and future conditions for that city and that city is added to the search history
@@ -30,19 +16,12 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 WHEN I open the weather dashboard
 THEN I am presented with the last searched city forecast
-```
 
-The following image demonstrates the application functionality:
 
-![weather dashboard demo](./Assets/06-server-side-apis-homework-demo.png)
+This project was highly challenging and I struggled a lot with several things in the acceptance criteria . Although I attempted to write the code to pull the UV index , I was unsuccessful .  Among other challenges, I want toi include my understanding of presenting a 5 day forecast, and the search function for random cities.  Although I struggled , I do feel more confident with ajax calls and functions. Some of the things I waas able to execute include successfully linking my api for select cities that I have chosen. I was able to create a wireframe and make my page accordingly to include the temperature, wind speed and humidity within the cities.  Overall I would have like to have had more time in office hours to answer some questions but I gave this project 100% and pushed myself to complete as much of the project as possible
 
-## Review
+Special thanks to:
+Shoshanah Lo Greco
+Rhiley Southam
+Beau Cowan
 
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
