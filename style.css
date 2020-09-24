@@ -13,10 +13,9 @@
     display: container;
     width: 100%;
     border: black;
-    background-color: #5c5d5c;
+    background-color: #0d0e0d;
     padding: 20px 28px;
     font-size: 16px;
-    cursor: pointer;
     text-align: center;
 
 }
@@ -52,4 +51,7 @@ font-family: cursive;
 }
 .temp {
 font-family: cursive;
+}
+.jumbotron {
+  background-color: black;  
 }
